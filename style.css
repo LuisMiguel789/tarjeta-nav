@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(48, 204, 131);
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    padding-left: 30%;
+    padding-top: 100px;
+    animation: transform 0.3s ease-out;
+}
+
+/* main */
+#container {
+    background-image: url(Imagenes/fondo-navidad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    border: 3px solid none;
+    padding: 5%;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+/* container of "elements"-"elements2"-"cont-music"  */
+#elemnts {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+/* container-cat-navidad*/
+#elements2 img {
+    margin-left: 160px;
+    border-radius: 20px;
+    margin-top: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+#cat-navidad {
+    transition: transform 0.3s ease;
+}
+
+/* text */
+h2 {
+    position: absolute;
+    font-size: 30px;
+    margin-left: 150px;
+    padding-top: 150px;
+}
+
+/* container-button */
+#cont-music {
+    padding-left: 210px;
+    padding-top: 20px;
+}
+
+/* button */
+#button  {
+    border: none;
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    position: relative;
+    overflow: hidden;
+    transform: transform 0.3s ease;
+}
+#button:hover {
+    transform: scale(1.2);
+}
+
+/* Animaciones */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Helvetica, sans-serif;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.pulse {
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgb(253, 253, 253, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(253, 253, 253, 0.7);
+    }
+    100%{
+        box-shadow: 0 0 5px rgba(253, 253, 253, 0.5);
+    }
+}
+
+/* nieve */
+.nieve {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: caer 4s linear infinite;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.tarjeta:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+}
